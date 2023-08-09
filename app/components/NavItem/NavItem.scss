@@ -1,0 +1,14 @@
+.link {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+
+  &--active {
+    font-weight: bold;
+  }
+}
+
+.icon-wrapper {
+  margin-left: 3px;
+  margin-top: 2px;
+}
