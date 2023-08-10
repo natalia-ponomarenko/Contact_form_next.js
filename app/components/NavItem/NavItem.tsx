@@ -4,7 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import "./NavItem.scss";
 
-const NavItem = ({ href, text, className }) => {
+type Props = {
+  href: string;
+  text: string;
+  className?: string;
+}
+
+const NavItem: React.FC<Props> = ({ href, text, className }) => {
   const angleDown =
   text === "Features" ? (
     <div className="icon-wrapper">

@@ -1,0 +1,144 @@
+.form {
+  padding: 0 20px;
+
+  & h3 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+
+    & input {
+      height: 35px;
+      width: 100%;
+      font-size: 14px;
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid #8d8d8d;
+      margin: 10px 0;
+      caret-color: #8d8d8d;
+      background-color: transparent;
+
+      &:focus::placeholder {
+        color: transparent;
+      }
+
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 50px white inset;
+      }
+    }
+
+    &.message {
+      margin-bottom: 25px;
+      max-width: 330px;
+    }
+  }
+
+  &__inputs {
+    margin: 30px 0;
+  }
+
+  &__input-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #8d8d8d;
+    text-align: start;
+  }
+
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__checkboxes-group {
+    display: flex;
+  }
+
+  &__submit-button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 30px;
+    width: 100%;
+    max-width: 280px;
+    font-size: 13px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    margin-bottom: 10px;
+    &:hover {
+      color: #616161;
+    }
+  }
+
+  &__image-wrapper {
+    height: 100px;
+    width: 200px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__image {
+    object-fit: cover;
+  }
+}
+
+.form__input-label.form__input-active {
+  color: #000;
+}
+
+@media screen and (min-width: 1300px) {
+  .form {
+    padding: 0 40px 20px 40px;
+
+    &__group {
+      flex-direction: row;
+      margin-bottom: 40px;
+      gap: 40px;
+    }
+
+    &__image-wrapper {
+      width: 350px;
+      height: 150px;
+      margin: 0 0 0 auto;
+    }
+
+
+    &__input-wrapper.message {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__checkboxes {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__checkboxes-group {
+      width: 100%;
+      justify-content: space-between;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+
+    &__button-wrapper {
+      width: 100%;
+      text-align: right;
+    }
+
+  }
+}

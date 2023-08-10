@@ -1,7 +1,8 @@
 import "./main.scss";
 import { Inter, Roboto, Poppins, Manrope } from "next/font/google";
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import ContactPage from "./components/ContactPage/ContactPage";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
@@ -41,7 +42,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Header />
-        {/* {children} */}
+        <ContactPage />
         <Footer />
       </body>
     </html>

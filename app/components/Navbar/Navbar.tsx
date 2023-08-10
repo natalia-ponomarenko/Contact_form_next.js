@@ -5,9 +5,13 @@ import NavItem from "../NavItem/NavItem";
 import { inter } from "../../layout";
 import { useState } from "react";
 import "./Navbar.scss";
-import Image from "next/image";
+import Image from "next/image"
 
-const Navbar = ({ setNavActive }) => {
+type Props = {
+  setNavActive: (active: boolean) => void;
+};
+
+const Navbar: React.FC<Props>= ({ setNavActive }) => {
   return (
     <nav className="nav">
       <Link

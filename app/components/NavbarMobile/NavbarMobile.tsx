@@ -1,5 +1,5 @@
 import NavItem from "../NavItem/NavItem";
-import { MENU_LIST } from "@/utilities/constants";
+import { MENU_LIST } from "../../../utilities/constants";
 import "./NavbarMobile.scss";
 import Link from "next/link";
 import { inter } from "../../layout";

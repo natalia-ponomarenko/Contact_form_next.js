@@ -2,15 +2,19 @@
 import Link from "next/link";
 import "./Footer.scss";
 import { inter, poppins, manrope } from "../../layout";
-import Image from "next/image";
 import { useForm } from "react-hook-form";
+import ContactLinksBlock from "../ContactLinksBlock/ContactLinksBlock";
+
+type FormValues = {
+  email: string;
+};
 
 const Footer = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<FormValues>({
     mode: "onSubmit", // Set validation mode to "onSubmit"
   });
 
@@ -28,39 +32,7 @@ const Footer = () => {
         <div className="footer__group">
           <div className="footer__column">
             <h3>Reach us</h3>
-            <a href="tel:+1012 3456 789">
-              <Image
-                src="/icons/call.svg"
-                width={20}
-                height={20}
-                alt="phone icon"
-              />
-              <p>+1012 3456 789</p>
-            </a>
-            <a href="mailto:demo@gmail.com">
-              <Image
-                src="/icons/email.svg"
-                width={20}
-                height={20}
-                alt="phone icon"
-              />
-              <p>demo@gmail.com</p>
-            </a>
-            <a
-              href="https://goo.gl/maps/LCSU6QTLmZ1zcu6a6"
-              target="_blank"
-              rel="noopener"
-            >
-              <Image
-                src="/icons/email.svg"
-                width={20}
-                height={20}
-                alt="phone icon"
-              />
-              <p>
-                132 Dartmouth Street Boston, Massachusetts 02156 United States
-              </p>
-            </a>
+            <ContactLinksBlock margin={5}/>
           </div>
           <div className="footer__column footer__column-right footer__stretch">
             <h3>Company</h3>
