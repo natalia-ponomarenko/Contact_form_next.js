@@ -11,6 +11,8 @@ const Header = () => {
   const slideInAnimation = useSpring({
     minHeight: "100vh",
     width: "100%",
+    position: 'fixed',
+    zIndex: 100,
     opacity: isMobileNavActive ? 1 : 0,
     transform: isMobileNavActive ? "translateY(0)" : "translateY(-100%)",
   });
@@ -18,7 +20,7 @@ const Header = () => {
   return (
     <header className="header">
       {isMobileNavActive ? (
-        <animated.nav style={slideInAnimation}>
+        <animated.nav style={{ ...slideInAnimation, position: "fixed"}}>
           <NavbarMobile setNavActive={setMobileNavActive} />
         </animated.nav>
       ) : (
