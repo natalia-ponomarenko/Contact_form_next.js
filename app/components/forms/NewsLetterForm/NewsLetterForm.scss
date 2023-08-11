@@ -1,0 +1,65 @@
+.join-us {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__header {
+    margin: 2px 0 0 0;
+  }
+
+  &__success-message {
+    font-size: 10px;
+    position: absolute;
+    bottom: -15px;
+    color: #7dd864;
+  }
+
+  &__input-wrapper {
+    position: relative;
+
+    & input {
+      width: 170px;
+      height: 40px;
+      background-color: #1a1a1a;
+      border: none;
+      outline: none;
+      padding: 10px;
+      font-size: 11px;
+      color: #fff;
+      font-family: inherit;
+
+      &::placeholder {
+        color: #616161;
+        opacity: 1;
+      }
+    }
+
+    & button {
+      width: 100px;
+      padding: 10px 10px 12px 10px;
+      font-size: 12px;
+      color: #fff;
+      background-color: #000;
+      border: none;
+      font-family: inherit;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #717171;
+      }
+    }
+  }
+
+  &__extra {
+    font-size: 13px;
+    color: #717171;
+  }
+
+  &__message {
+    font-size: 10px;
+    position: absolute;
+    bottom: -15px;
+    color: #eb5656;
+  }
+}

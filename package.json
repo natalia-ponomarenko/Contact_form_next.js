@@ -21,7 +21,6 @@
     "react-spring": "^9.7.2"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.0.1",
     "@types/node": "^20.4.9",
     "@types/react": "^18.2.20",
     "sass": "^1.64.2",

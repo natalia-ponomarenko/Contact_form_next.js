@@ -1,42 +1,27 @@
-# Mbunity Development - Next.js Front-End Technical Assessment
+# NextJS_contact_form
 
-## Overview
+This project is a Next.js one-page contact form, created for interaction between users and company. The structure of page includes Header (as well as menu for responsive devices) and Footer with links and subscription form. Forms can be validated with react-hook-form-library.
 
-This is a Mbunity Development technical assessment for potential Next.js Frontend Engineer.
+- [DEMO LINK]()
 
-The purpose of this exercise is to assess your:
+### Technologies 🛠️:
+ - Next.js
+ - React
+ - Font Awesome
+ - React-hook-form
+ - React Spring
+ - Sass
+ - TypeScript
+ - ESLint
 
-- Next.js knowledge
-- Figma knowledge
-- Code quality
-- Thinking process
-- Using various technologies
-- The ability to make your own decisions
+### How to run project locally
+* Fork and clone this repository
+* npm i
+* npm run dev
+* open your browser at http://localhost:3000
 
-When you are ready to submit your assessment, please email the team to let us know: `recruitment@mbunity.com`.
+### Dependencies
+Node v14.18.0 and higher
 
-## Technologies
-
-Please implement your solution in your preferred techologies from the below:
-
-- GitLab or GitHub
-- Heroku or Vercel
-- Next.js 13+
-
-## Deliverables
-
-1. Instructions to run the code.
-2. Comments throughout the code that highlights your thinking process.
-3. Push it to the _**private GitHub/GitLab repository**_ and provide access to user `@mbunity-recruitment`.
-4. You should upload your Next.js app to Vercel or to Heroku and provide us with a link.
-5. Send recruiter email with links and ask about next steps.
-
-## Task
-
-- **Build page according Figma file using React.**
-
-
-## Good luck
-
-And don't forget to notify the Recruiter once you're done!
-
+### Troubleshooting
+For any contributing or problem solving you could find me - [here](https://t.me/ponomarenko_nataliia)
