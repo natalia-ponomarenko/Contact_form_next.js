@@ -1,16 +1,18 @@
-"use client";
-import React, { forwardRef, InputHTMLAttributes } from "react";
+import React, { forwardRef, InputHTMLAttributes, ReactNode } from "react";
+import { FieldError, FieldErrorsImpl, Merge } from "react-hook-form";
 
 type InputProps = {
   type: string;
   placeholder: string;
-  error: string;
+  error: ReactNode | FieldError | Merge<FieldError, FieldErrorsImpl<any>>;
 };
 
 const Input: React.ForwardRefRenderFunction<
   HTMLInputElement,
   InputProps & InputHTMLAttributes<HTMLInputElement>
 > = ({ type, placeholder, error, ...props }, forwardedRef) => {
+  const errorMessage = typeof error === "string" ? error : null;
+
   return (
     <>
       <input
@@ -20,7 +22,7 @@ const Input: React.ForwardRefRenderFunction<
         ref={forwardedRef}
         className="input"
       />
-      {error && <div className="form__error">{error}</div>}
+      {errorMessage && <div className="form__error">{errorMessage}</div>}
     </>
   );
 };

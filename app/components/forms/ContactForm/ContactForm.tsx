@@ -2,20 +2,15 @@
 import "./ContactForm.scss";
 import { poppins } from "../../../../utilities/fonts";
 import { useEffect, useState } from "react";
-import CustomCheckbox from "../../uiComponents/CustomCheckbox/CustomCheckbox";
 import Image from "next/image";
-import { useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import Input from "../../uiComponents/Input/Input";
 import InputLabel from "../../uiComponents/InputLabel/InputLabel";
 import { emailPattern, phonePattern } from "../../../../utilities/constants";
+import CustomRadioButton from "../../uiComponents/CustomRadioButton/CustomRadioButton";
+import { FormValues } from "../../../../types/FormValues";
 
-type FormValues = {
-  name: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message: string;
-};
+export type MyFormValues = FieldValues & FormValues;
 
 const ContactForm = () => {
   const [nameValue, setNameValue] = useState("");
@@ -39,7 +34,7 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<FormValues>({
+  } = useForm<MyFormValues>({
     mode: "onSubmit",
   });
 
@@ -146,27 +141,34 @@ const ContactForm = () => {
           </div>
         </div>
         <h3>Select Subject?</h3>
-        <div className="form__checkboxes">
-          <div className="form__checkboxes-group">
-            <CustomCheckbox
+        <div className="form__radiobuttons">
+          <div className="form__radiobutton-group">
+            <CustomRadioButton
               label="General Inquiry"
-              name="checkbox1"
+              value="subject1"
+              register={register}
             />
-            <CustomCheckbox
+            <CustomRadioButton
               label="General Inquiry"
-              name="checkbox2"
-            />
-          </div>
-          <div className="form__checkboxes-group">
-            <CustomCheckbox
-              label="General Inquiry"
-              name="checkbox3"
-            />
-            <CustomCheckbox
-              label="General Inquiry"
-              name="checkbox4"
+              value="subject2"
+              register={register}
             />
           </div>
+          <div className="form__radiobutton-group">
+            <CustomRadioButton
+              label="General Inquiry"
+              value="subject3"
+              register={register}
+            />
+            <CustomRadioButton
+              label="General Inquiry"
+              value="subject4"
+              register={register}
+            />
+          </div>
+          {errors.subject?.type === "required" && (
+            <div className="form__error">Subject is required</div>
+          )}
         </div>
         <div className="form__group message">
           <div className="form__input-wrapper message">

@@ -1,0 +1,47 @@
+.radio {
+  display: block;
+  position: relative;
+
+  &__label {
+    &:after {
+      width: 13px;
+      height: 13px;
+      content: '';
+      background-color: #E0E0E0;
+      border-radius: 50%;
+      z-index: 2;
+      position: absolute;
+      right: 110%;
+      top: 60%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: all 200ms ease-in;
+    }
+  }
+
+  &__input:checked ~ &__label {
+    &:before {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    &:after {
+      background-image: url('/icons/blackCircle.svg');
+      background-repeat: no-repeat;
+      background-position: 0px -1px;
+    }
+  }
+
+  input[type='radio'] {
+    width: 13px;
+    height: 13px;
+    order: 1;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    visibility: hidden;
+  }
+}

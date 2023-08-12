@@ -67,17 +67,25 @@
     }
   }
 
-  &__checkboxes {
+  &__radiobuttons {
     display: flex;
     flex-direction: column;
-    margin: 10px 0;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    margin: 10px auto;
+    justify-content: flex-start;
+    position: relative;
+    max-width: 280px;
+    padding: 5px 0;
   }
 
-  &__checkboxes-group {
+  &__radiobutton-group {
     display: flex;
+    margin-left: 25px;
+    justify-content: space-between;
+
+    & label {
+      font-size: 12px;
+      margin-right: 20px;
+    }
   }
 
   &__submit-button {
@@ -139,17 +147,16 @@
       width: 100%;
     }
 
-    &__checkboxes {
-      flex-direction: row;
-      justify-content: space-between;
+    &__radiobuttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 100%;
     }
 
-    &__checkboxes-group {
-      width: 100%;
-      justify-content: space-between;
+    &__radiobutton-group {
 
-      &:first-child {
-        margin-right: 20px;
+      & label {
+        margin-right: 40px;
       }
     }
 
